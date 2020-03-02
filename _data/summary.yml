@@ -1,0 +1,49 @@
+enable: true
+
+source: git # 页面源路径
+destination: git # 页面构建路径（相对于 site.destination）
+
+# 目录表
+catalog:
+  - name: 简介
+    path: index.html
+  - section: 基础篇
+    collapse: false
+    path: basics/README.md
+    docs:
+      - name: 安装
+        path: basics/setup.html
+  - section: 进阶篇
+    collapse: false
+    docs:
+      - name: 语法高亮
+        path: b/highlight.html
+      - name: Front Matter
+        path: b/front-matter.html
+      - name: 搜索
+        path: b/search.html
+  - section: 高级篇
+    collapse: false
+    docs:
+      - section: 目录结构
+        collapse: false
+        docs:
+          - name: main.c
+            path: src/main.html
+          - name: log.c
+            path: src/log.html
+      - section: 数据文件
+        collapse: true
+        docs:
+          - name: summary
+            path: cli/ls.html
+          - name: cat
+            path: cli/cat.html
+
+# 重定向（oldpath: newpath）
+redirect:
+  - "cmds/git-branch/README.html": "cmd/git-branch.html"
+
+# 相关知识库
+relatives:
+  - kubernetes
